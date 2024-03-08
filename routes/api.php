@@ -49,3 +49,10 @@ Route::get('receber/nome', function (Request $request){
         return $resultado;
 
     });
+
+    Route::get('receber/divisão', function(Request $request){
+        $primeiroNumero = $request->input('primeiroNumero');
+        $segundoNumero = $request->input('segundoNumero');
+        $resultado = $primeiroNumero / $segundoNumero;
+        Return $resultado;
+    });
