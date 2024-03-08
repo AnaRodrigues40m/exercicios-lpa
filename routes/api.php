@@ -87,3 +87,10 @@ Route::get('receber/nome', function (Request $request){
         $resultado = "O dobro do " . $numero . " é igual a: " . $dobro;
         return $resultado;
     });
+
+    Route::get('retangulo', function (request $request) {
+        $base = $request->input('base');
+        $altura = $request->input('altura');
+        $resultado = "A area do retangulo é " . $base * $altura;
+        return $resultado;
+    });
