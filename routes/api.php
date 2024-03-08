@@ -29,3 +29,11 @@ Route::get('receber/nome', function (Request $request){
         $resultado = "Meu nome é " . $primeiroNombre . ", tenho" . $suaIdade . " anos";
          return $resultado;
     });
+
+    Route::get('nome/usuario', function(Request $request){
+        $eduardo = $request -> input('nome');
+        $numero = $request -> intup('idade');
+        $cidade = $request -> intup('cidade');
+
+        return 'Meu nome é ' .  $eduardo . ', nasci no ano de '. $numero. ' na cidade '. $cidade ;
+    });
