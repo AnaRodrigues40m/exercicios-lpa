@@ -17,3 +17,8 @@ Route::get('receber/nome', function (Request $request){
         $media = ($primeiraEntrada + $segundaEntrada)/2;
         return $media;
     });
+
+    Route::get('nome/usuario', function(Request $request){
+        $nomeUsuario = $request -> input('primeiroUsuario');
+        return $nomeUsuario;
+    });
