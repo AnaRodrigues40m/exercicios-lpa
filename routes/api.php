@@ -124,3 +124,12 @@ Route::get('receber/nome', function (Request $request){
         $resultado = $valorTotal + ($porcentagem * $desconto);  
         return $resultado;
     });
+
+    Route::get('dias16', function (request $request) {
+        $dias = $request->input('dias');
+        $horas = $dias * 24;
+        $minutos = $horas * 60;
+        $segundos = $minutos * 60;
+        $resultado = "dias: " . $dias . ", horas: " . $horas . ", minutos: " . $minutos . ", segundos: " . $segundos;
+        return $resultado;
+    });
