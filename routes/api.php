@@ -56,3 +56,10 @@ Route::get('receber/nome', function (Request $request){
         $resultado = $primeiroNumero / $segundoNumero;
         Return $resultado;
     });
+
+    Route::get('multiplicação', function (request $request) {
+        $numeroUm = $request->input('primeiroNumero');
+        $numeroDois = $request->input('segundoNumero');
+        $resultado = $numeroUm * $numeroDois;
+        return $resultado;
+    });
