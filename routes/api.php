@@ -22,3 +22,10 @@ Route::get('receber/nome', function (Request $request){
         $nomeUsuario = $request -> input('primeiroUsuario');
         return $nomeUsuario;
     });
+
+    Route::get('senai', function(Request $request){
+        $primeiroNombre = $request -> input('notaNome');
+        $suaIdade = $request -> input('notaIdade');
+        $resultado = "Meu nome é " . $primeiroNombre . ", tenho" . $suaIdade . " anos";
+         return $resultado;
+    });
