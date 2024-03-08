@@ -37,3 +37,15 @@ Route::get('receber/nome', function (Request $request){
 
         return 'Meu nome é ' .  $eduardo . ', nasci no ano de '. $numero. ' na cidade '. $cidade ;
     });
+
+    Route::get(' Calculadora', function (Request $request){
+
+        $primeiroNumero = $request->input('numeroUm');
+
+        $segundoNumero = $request->input('numeroDois');
+
+        $resultado = $primeiroNumero + $segundoNumero;
+
+        return $resultado;
+
+    });
