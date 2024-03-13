@@ -24,21 +24,21 @@ Route::get('receber/nome', function (Request $request){
     });
 
     Route::get('senai', function(Request $request){
-        $primeiroNombre = $request -> input('notaNome');
+        $primeiroNombre = $request -> input('primeiroNome');
         $suaIdade = $request -> input('notaIdade');
         $resultado = "Meu nome é " . $primeiroNombre . ", tenho" . $suaIdade . " anos";
          return $resultado;
     });
 
     Route::get('nome/usuario', function(Request $request){
-        $eduardo = $request -> input('nome');
-        $numero = $request -> intup('idade');
-        $cidade = $request -> intup('cidade');
+        $eduardo = $request ->input('nome');
+        $numero = $request ->input('idade');
+        $cidade = $request ->input('cidade');
 
         return 'Meu nome é ' .  $eduardo . ', nasci no ano de '. $numero. ' na cidade '. $cidade ;
     });
 
-    Route::get(' Calculadora', function (Request $request){
+    Route::get('Calculadora', function (Request $request){
 
         $primeiroNumero = $request->input('numeroUm');
 
@@ -82,7 +82,7 @@ Route::get('receber/nome', function (Request $request){
     });
 
     Route::get('dobro', function (request $request) {
-        $numero = $request->input('numero');
+        $numero = $request->input('dobro');
         $dobro = $numero * 2;
         $resultado = "O dobro do " . $numero . " é igual a: " . $dobro;
         return $resultado;
