@@ -140,3 +140,67 @@ Route::get('receber/nome', function (Request $request){
         $resultado = "valor total: " . $precoProduto * $quantidade;
         return $resultado;
         });
+
+        Route::get('verificar/idade', function (Request $request){
+            $idade = $request->input('idade');
+            if($idade >= 18){
+                return "maior de idade";
+            } else {
+                return "menor de idade";
+            }
+        });
+
+        Route::get('verificar/par', function(Request $request){
+            $numero = $request->input('numero');
+            if($numero % 2 == 0){
+                return 'par';
+            } else {
+                return 'impar';
+            }
+
+        });
+
+        Route::get('exercicio/01', Function(Request $request){
+            $numero = $request->input('valor');
+            if($numero >= 10){
+                return "maior que 10";
+            } else {
+                return "menor que 10";
+            }
+                
+
+        });
+
+        Route::get('exercicio/02', Function(Request $request){
+            $numero = $request->input('temperatura');
+
+            if($numero > 30){
+                return " Está quente ";
+            } else {
+                return " Está um ótimo clima ";
+            }
+        });
+
+        Route::get('exercicio/03', Function(Request $request){
+            $numero = $request->input('valor');
+            if($numero > 0){
+                return 'positivo';
+            }
+            if($numero < 0){
+                return 'negativo';
+            }
+            else {
+                return 'zero';
+            }
+        });
+
+        Route::get('exercicio/04', Function(Request $request){
+            $numero = $request->input('valor');
+            $numero2 = $request->input('numero');
+            if($numero > $numero2){
+            return $numero;
+            }
+            else {
+                return $numero2;
+            }
+        });
