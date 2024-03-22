@@ -204,3 +204,14 @@ Route::get('receber/nome', function (Request $request){
                 return $numero2;
             }
         });
+
+        route::get('divisivel/tres', function(Request $request){
+            $numero = $request->input('numero');
+            
+        if($numero % 3){
+            return $numero . " não é divisivel por 3";
+        } else {
+            return $numero . " é divisivel por 3";
+        }
+    
+        });
