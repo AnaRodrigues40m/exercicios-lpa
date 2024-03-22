@@ -160,15 +160,13 @@ Route::get('receber/nome', function (Request $request){
 
         });
 
-        Route::get('exercicio/01', Function(Request $request){
-            $numero = $request->input('valor');
-            if($numero >= 10){
+        Route::get('exercicio/01', function (Request $request){
+            $idade = $request->input('idade');
+            if($idade >= 10){
                 return "maior que 10";
             } else {
                 return "menor que 10";
             }
-                
-
         });
 
         Route::get('exercicio/02', Function(Request $request){
@@ -205,7 +203,7 @@ Route::get('receber/nome', function (Request $request){
             }
         });
 
-        route::get('divisivel/tres', function(Request $request){
+        route::get('exercicio/05', function(Request $request){
             $numero = $request->input('numero');
             
         if($numero % 3){
@@ -215,3 +213,63 @@ Route::get('receber/nome', function (Request $request){
         }
     
         });
+
+        
+        route::get('exercicio/12', function(Request $request){
+            $numero = $request->input('numero');
+            
+        if($numero % 6){
+            return $numero . " não é divisivel por 6";
+        } else {
+            return $numero . " é divisivel por 6";
+        }
+    
+        });
+
+        Route::get('exercicio/4', function(Request $request){
+            $numero = $request->input('numero');
+            if($numero % 2 == 0){
+                return 'par';
+            } else {
+                return 'impar';
+            }
+
+        });
+
+        Route::get('exercicio/10', Function(Request $request){
+            $numero = $request->input('numero');
+
+        if($numero % 2 == 0){
+            return 'par';
+        } else {
+            return 'positivo';
+        }
+        });
+
+        Route::get('exercicio/14', function (Request $request){
+            $idade = $request->input('idade');
+            if($idade >=18){
+                if($idade <=18)
+                return "maior de idade você pode dirigir";
+                return 'menor de idade você não pode dirigir';
+            } else {
+            }
+        });
+
+        Route::get('exercicio/19', function (request $request) {
+            $numeroUm = $request->input('primeiroNumero');
+            $numeroDois = $request->input('segundoNumero');
+            $resultado = $numeroUm * $numeroDois;
+            return "maior que cem";
+            return $resultado;
+        });
+
+        Route::get('exercicio/17', function (Request $request){
+            $idade = $request->input('idade');
+            if($idade >= 18){
+                return "Você é maior de idade Ana";
+            } else {
+                return "Você é menor de idade Ana";
+            }
+        });
+
